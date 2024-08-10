@@ -1,33 +1,36 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'; // For GitHub flavored Markdown
+import remarkGfm from 'remark-gfm';
+import styled from 'styled-components';
+
+
+const Container = styled.div`
+  padding: 1rem;
+  max-width: 23rem;
+  margin: 2rem auto;
+  text-align: center;
+`;
+
+const Title = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+`;
+
+const Content = styled.div`
+  font-size: 1.125rem;
+  line-height: 1.6;
+`;
+
 
 const Detail = ({ title, content }) => (
-  <div style={styles.container}>
-    <h2 style={styles.title}>{title}</h2>
-    <div style={styles.content}>
+  <Container>
+    <Title>{title}</Title>
+    <Content>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>
         {content}
       </ReactMarkdown>
-    </div>
-  </div>
+    </Content>
+  </Container>
 );
-
-const styles = {
-  container: {
-    padding: '1rem',
-    maxWidth: '23rem',
-    margin: '2rem auto',
-    textAlign: 'center',
-    },
-  title: {
-    fontSize: '2rem',
-    marginBottom: '1rem',
-  },
-  content: {
-    fontSize: '1.125rem',
-    lineHeight: '1.6',
-  },
-};
 
 export default Detail;
