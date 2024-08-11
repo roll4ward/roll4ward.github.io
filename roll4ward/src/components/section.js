@@ -11,10 +11,12 @@ const SectionContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  padding: 10% 5%;
+  border-bottom: 1px solid black;
+
+  padding: 0 5%;
 `;
 
-const Section = ({ children, height = "47vh"}) => (
+const Section = ({ children, height = "50vh"}) => (
   <SectionContainer height = {height}>
     {children}
   </SectionContainer>

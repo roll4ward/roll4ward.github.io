@@ -11,7 +11,7 @@ const Container = styled.div`
 
     overflow-wrap: break-word;
     word-break: keep-all;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,18 +24,9 @@ const Container = styled.div`
     }
 `;
 
-const Title = styled.h1`
-    font-size: 7rem;
-    margin: 0;
-
-    @media (max-width: 768px) {
-    font-size: 4rem;
-    }
-`;
-
-const Subtitle = styled.h3`
-    font-size: 3.5rem;
-    margin: 2rem 0;
+const Title = styled.h2`
+    font-size: 2em;
+    margin: 1.5rem 0;
 
     @media (max-width: 768px) {
     font-size: 2rem;
@@ -43,23 +34,22 @@ const Subtitle = styled.h3`
 `;
 
 const Description = styled.p`
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     margin: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     @media (max-width: 768px) {
     font-size: 1rem;
     }
 `;
 
-const HeroSection = ({title, subtitle, description, button_config}) => (
+const ExplainSection = ({title, description, button_config}) => (
     <Container>
         <Title>{title}</Title>
-        {subtitle && <Subtitle>{subtitle}</Subtitle> }
         <Description>{description}</Description>
         <DetailButton style = {button_config.style} to = {button_config.to}>{button_config.text}</DetailButton>
     </Container>
 );
 
-export default HeroSection;
+export default ExplainSection;

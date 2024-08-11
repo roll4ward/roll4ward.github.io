@@ -9,11 +9,11 @@ const DetailButton = styled(Link)`
   border-radius: 1rem;
   text-decoration: none;
   
-  background-color: ${props => props.background ? props.background : "black"};
-  color: ${props => props.color ? props.color :"white" };
+  background-color: ${props => props.style.background ? props.style.background : "black"};
+  color: ${props => props.style.color ? props.style.color :"white" };
 
   &:visited {
-    color: ${props => props.color ? props.color :"white" };
+    color: ${props => props.style.color ? props.style.color :"white" };
   }
 
   @media (max-width: 768px) {
