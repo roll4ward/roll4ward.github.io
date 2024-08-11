@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import styled from "styled-components";
+import Footer from "./footer";
 
 const ContentContainer = styled.main`
   width: 100%;
@@ -42,12 +43,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <ContentContainer>{children}</ContentContainer>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        />
+      <Footer></Footer>
     </>
   )
 }

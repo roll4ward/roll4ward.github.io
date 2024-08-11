@@ -14,7 +14,7 @@ const SectionContainer = styled.div`
   padding: 10% 5%;
 `;
 
-const Section = ({ children, height = "45vh"}) => (
+const Section = ({ children, height = "47vh"}) => (
   <SectionContainer height = {height}>
     {children}
   </SectionContainer>
