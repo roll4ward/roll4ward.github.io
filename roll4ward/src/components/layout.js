@@ -21,6 +21,10 @@ const ContentContainer = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 768px) { // 화면 너비가 768px 이하일 때 (태블릿 및 모바일)
+    max-width: 100%; // 최대 너비를 100%로 설정하여 전체 너비 사용
+  }
 `;
 
 const Layout = ({ children }) => {
