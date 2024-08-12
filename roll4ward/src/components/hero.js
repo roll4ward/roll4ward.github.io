@@ -53,12 +53,12 @@ const Description = styled.p`
     }
 `;
 
-const HeroSection = ({title, subtitle, description, button_config}) => (
+const HeroSection = ({ content }) => (
     <Container>
-        <Title>{title}</Title>
-        {subtitle && <Subtitle>{subtitle}</Subtitle> }
-        <Description>{description}</Description>
-        <DetailButton style = {button_config.style} to = {button_config.to}>{button_config.text}</DetailButton>
+        <Title>{content.title}</Title>
+        {content.subtitle && <Subtitle>{content.subtitle}</Subtitle> }
+        <Description>{content.description.join("\n")}</Description>
+        <DetailButton style = {content.button.style} to = {content.button.to}>{content.button.text}</DetailButton>
     </Container>
 );
 

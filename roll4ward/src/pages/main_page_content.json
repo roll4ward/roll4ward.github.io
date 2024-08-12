@@ -1,0 +1,58 @@
+[
+    {
+        "type" : "hero",
+        "height" : "100vh",
+        "content" : {
+            "title" : "안녕하세요!",
+            "subtitle" : "스마트팜 연구 동아리\n앞구르기 입니다!",
+            "description" : ["우리는 진짜 문제를 해결하려고 노력합니다.",
+                             "이 뜻 깊은 여정을 함께하세요!"                            
+                            ],
+            "button" : {
+                "to" : "/apply",
+                "text" : "지금 바로 지원하기",
+                "style" : {
+                    "background" : "black",
+                    "color" : "white"
+                }
+            }                    
+        }
+    },
+    {
+        "type" : "explain",
+        "height" : "50vh",
+        "content" : {
+            "title" : "앞구르기는 어떤 동아리 인가요?",
+            "description" : ["앞구르기에 대해서 굼금하세요?",
+                             "앞구르기가 쌓아올린 멋진 것을 알아보세요",
+                             "앞구르기는 최고~"                            
+                            ],
+            "button" : {
+                "to" : "/about",
+                "text" : "알아보러 가기",
+                "style" : {
+                    "background" : "black",
+                    "color" : "white"
+                }
+            }
+        }
+    },
+    {
+        "type" : "explain",
+        "height" : "50vh",
+        "content" : {
+            "title" : "앞구르기 해보셨어요?",
+            "description" : ["앞구르기는 주간활동으로 앞구르기를 합니다.",
+                             "숨겨진 앞구르기 명소를 찾아보세요!"           
+                            ],
+            "button" : {
+                "to" : "/about",
+                "text" : "내리막길 찾아보기",
+                "style" : {
+                    "background" : "black",
+                    "color" : "white"
+                }
+            }
+        }
+    }
+]
