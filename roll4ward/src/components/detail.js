@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import styled from 'styled-components';
-
 
 const Container = styled.div`
   padding: 1rem;
-  max-width: 23rem;
   margin: 2rem auto;
   text-align: center;
+
+  @media (max-width: 768px){
+    
+  }
 `;
 
 const Title = styled.h2`
@@ -21,15 +21,10 @@ const Content = styled.div`
   line-height: 1.6;
 `;
 
-
 const Detail = ({ title, content }) => (
   <Container>
     <Title>{title}</Title>
-    <Content>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-        {content}
-      </ReactMarkdown>
-    </Content>
+    <Content dangerouslySetInnerHTML={{ __html: content }} />
   </Container>
 );
 
