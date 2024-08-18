@@ -1,28 +1,28 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import Detail from '../components/detail';
 
-const AboutPage = ({ data }) => {
+const PageTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
   return (
     <Layout>
-      <Detail title={frontmatter.title} content={html} />
+      <h1>{frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
 };
 
-export const pageQuery = graphql`
-  query {
-    markdownRemark(fileAbsolutePath: { regex: "/about.md/" }) {
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
       frontmatter {
         title
       }
-      html
     }
   }
 `;
 
-export default AboutPage;
+export default PageTemplate;
