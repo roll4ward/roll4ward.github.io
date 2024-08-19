@@ -28,7 +28,47 @@ const TitleContainer = styled.div`
 const ContentContainer = styled.div`
     width: 100%;
     margin-top: 5vh;
-`;
+
+    & * {
+      margin-bottom: 1.5rem;
+    }
+
+    & h1, h2, h3 {
+      margin-bottom: 2rem;
+    }
+
+    &  blockquote {
+      border-left: solid;
+      padding-left: 1rem;
+    }
+
+    & table {
+      border-collapse: collapse;
+    }
+
+    & table * {
+      margin: 0;
+    }
+
+    & thead {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+
+    & th, td {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+    }
+
+    & a {
+      color: #999;
+      text-decoration: underline;
+    }
+
+    & a:visited {
+      color: #999;
+    }
+  `;
 
 const PageTemplate = ({ data }) => {
   const { markdownRemark } = data;
