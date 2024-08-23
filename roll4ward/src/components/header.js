@@ -14,7 +14,9 @@ const Header = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Logo src={logo} alt="Logo" />
+        <LogoLink to="/">
+          <Logo src={logo} alt="Logo" />
+        </LogoLink>
         <Title>앞구르기</Title>
       </LogoContainer>
       <HamburgerMenu src={menu} alt="Menu" onClick={toggleMenu} />
@@ -35,6 +37,7 @@ const HeaderContainer = styled.header`
   background-color: rgba(153, 228, 149, 0.8);
   color: #00712A;
   position: relative;
+  border-bottom: 1px solid #ebebeb;
 
   @media (max-width: 768px) {
     flex-direction: row;
@@ -45,6 +48,9 @@ const HeaderContainer = styled.header`
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+`;
+
+const LogoLink = styled(Link)`
 `;
 
 const Logo = styled.img`
@@ -60,7 +66,7 @@ const Title = styled.h1`
   margin: 0;
   display: flex;
   align-items: center;
-  color: #00712A; /* Updated text color */
+  color: #00712A;
 `;
 
 const HamburgerMenu = styled.img`
